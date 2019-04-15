@@ -118,15 +118,18 @@ def game_hash
 end
 
 def num_points_scored(name)
-
+  player = find_the_player(name)
+  player.fetch(:points)
 end
 
 def shoe_size(name)
-  
+  player = find_the_player(name)
+  player.fetch(:shoe)
 end
 
 def team_colors
-  game_hash.values.find {|team| team.fetch(:colors)}
+  team = find_the_team(team_name)
+  team.fetch(:colors)
 end
 
 def team_names
@@ -134,7 +137,7 @@ def team_names
 end
 
 def player_numbers(team)
-  
+  find_the_team(team_name)[:players].collect { |name , stats| stats[:number] }
 end
 
 def player_stats(name)
