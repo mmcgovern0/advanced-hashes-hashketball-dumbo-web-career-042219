@@ -130,7 +130,7 @@ def team_colors
 end
 
 def team_names
-  game_hash.values.collect {|team| team.fetch(:team_name)}
+  teams.collect {|team| team.fetch(:team_name)}
 end
 
 def player_numbers(team)
@@ -146,7 +146,11 @@ def big_shoe_rebounds
 end
 
 #heleper methods
-def team
+def teams
+  game_hash.values
+end
+
+
 
 
 
