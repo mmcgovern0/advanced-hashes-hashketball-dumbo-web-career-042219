@@ -151,7 +151,7 @@ def teams
 end
 
 def players
-  
+  game_hash
 
 
 
