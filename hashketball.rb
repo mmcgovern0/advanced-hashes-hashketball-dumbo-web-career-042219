@@ -136,7 +136,7 @@ def team_names
   teams.collect {|team| team.fetch(:team_name)}
 end
 
-def player_numbers(team)
+def player_numbers(team_name)
   find_the_team(team_name)[:players].collect { |name , stats| stats[:number] }
 end
 
