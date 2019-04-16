@@ -145,8 +145,7 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  biggest_shoe = players.max_by{|name, stats| stats.fetch(:shoe)}[1]
-  biggest_shoe.fetch[:rebounds]
+  biggest_shoe_size.fetch[:rebounds]
 end
 
 #heleper methods
@@ -167,7 +166,8 @@ def find_the_player(name)
 end
   
 def biggest_shoe_size
-  
+  players.max_by{|name, stats| stats.fetch(:shoe)}[1]
+end
 
 
 
