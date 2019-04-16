@@ -145,7 +145,7 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  biggest_shoe_size.fetch[:rebounds]
+  biggest_shoe_size.fetch(:rebounds)
 end
 
 #heleper methods
